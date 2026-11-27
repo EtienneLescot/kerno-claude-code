@@ -8,7 +8,7 @@
     {
       "name": "kerno",
       "source": "./plugins/kerno",
-      "description": "Kerno memory for Claude Code: recall and save decisions, preferences and project status across sessions and tools, by default.",
+      "description": "Kerno memory for Claude Code: recall and save decisions, preferences and project status across sessions and tools, by default, and show what is remembered (history, diffs, corrections).",
       "category": "productivity",
       "homepage": "https://kerno.md"
     }

@@ -19,6 +19,8 @@ Pour Claude sur le web, Desktop et mobile, Codex, Cursor et les autres clients M
 
 - Serveur MCP distant `https://api.kerno.md/mcp` (OAuth 2.1, aucune clé à copier).
 - Skill `kerno-memory` : quand relire et quand enregistrer.
+- Skill `kerno-show` : montrer ce que Kerno sait (sujets, versions, auteurs, historique, différences entre versions, ce qui semble obsolète ou en conflit) et corriger avec votre accord. Demandez simplement « montre-moi ce que Kerno sait sur… » ou tapez `/kerno:kerno-show`.
+- Skill `kerno-review` : faire le ménage (sujets obsolètes, en double ou contradictoires), corrections proposées avant d'être appliquées.
 - Hook `SessionStart` : rappelle à Claude, à chaque session, que Kerno est sa mémoire.
 
 ## Données

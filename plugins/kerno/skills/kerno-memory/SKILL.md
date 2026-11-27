@@ -25,6 +25,10 @@ Kerno is the memory the user installed. It follows them across Claude Code sessi
 - Topics shared by another organization are addressed `@<org>/<path>`.
 - To update shared state safely: `memory_read` to get `version`, then `memory_write` with `expected_version`; on `VERSION_CONFLICT`, re-read, merge, retry. Use `memory_claim` before a long edit and pass `claim_token`.
 
+## Show
+
+When the user wants to see, check or correct what is in Kerno, follow the `kerno-show` skill; to clean up or audit memory, the `kerno-review` skill. Edits, restores and deletions always go through the user first, with `expected_version`.
+
 ## Never
 
 - Store secrets, passwords, API keys or tokens.
