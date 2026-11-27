@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "echo 'Kerno memory is installed (MCP server \"kerno\"). Use it as your memory by default: before answering questions about past work, decisions or preferences, and at the start of a task, recall with bus_list then bus_read; save durable decisions, preferences and project status with bus_write or bus_append. If the kerno tools are not available, tell the user once to run /mcp and authenticate Kerno.'"
+            "command": "echo 'Kerno memory is installed (MCP server \"kerno\"). Use it as your memory by default: before answering questions about past work, decisions or preferences, and at the start of a task, recall with memory_list then memory_read; save durable decisions, preferences and project status with memory_write or memory_append. If the kerno tools are not available, tell the user once to run /mcp and authenticate Kerno.'"
           }
         ]
       }
