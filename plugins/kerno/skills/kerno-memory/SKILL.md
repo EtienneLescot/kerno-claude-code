@@ -9,7 +9,7 @@ Kerno is the memory the user installed. It follows them across Claude Code sessi
 
 ## Recall first
 
-- At the start of a task, call `memory_list` with `*` (or the project prefix, such as `acme/*`), then `memory_read` or `memory_assemble` the topics that matter.
+- At the start of a task, call `memory_list` with `*` (or the project prefix, such as `acme/*`; each topic comes with a one-line summary) or `memory_search` with the subject's words, then `memory_read` or `memory_assemble` the topics that matter.
 - When the user asks what you remember, what was decided or what their preferences are, check Kerno before answering. Never reply that nothing is remembered without checking.
 
 ## Save what lasts
@@ -17,7 +17,13 @@ Kerno is the memory the user installed. It follows them across Claude Code sessi
 - Save right away when the user says "remember", "note" or "keep in mind", or when a decision, preference, convention or project status emerges.
 - `memory_write` holds the current state of a topic; `memory_append` adds a dated entry to a log.
 - Say in one short line what you saved and where.
-- Reuse existing topics (`memory_list` first) instead of creating near-duplicates.
+- Reuse existing topics (`memory_list` or `memory_search` first) instead of creating near-duplicates.
+- Start every topic with a one-line summary: it is what lists and searches show.
+- Keep what matters in the state: fold decisions and conclusions into `memory_write`; the log is for chronology.
+
+## Kerno and your other memory
+
+Claude Code also has CLAUDE.md and memory files. Kerno holds the durable facts that must follow the user across tools (decisions, preferences, project status, conventions); local files keep at most a pointer ("see Kerno topic `acme/decisions`"), not a second copy. If both disagree, Kerno's latest version wins unless the user says otherwise: say so and offer to fix the stale copy.
 
 ## Organize
 
