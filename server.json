@@ -1,0 +1,30 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.EtienneLescot/kerno",
+  "title": "Kerno",
+  "description": "Shared, versioned memory for AI assistants and teams, hosted in France. Free tier, OAuth sign-in.",
+  "version": "1.2.8",
+  "websiteUrl": "https://kerno.md/en/",
+  "repository": {
+    "url": "https://github.com/EtienneLescot/kerno-claude-code",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://kerno.md/favicon.svg",
+      "mimeType": "image/svg+xml",
+      "sizes": ["any"]
+    },
+    {
+      "src": "https://kerno.md/icon-512.png",
+      "mimeType": "image/png",
+      "sizes": ["512x512"]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.kerno.md/mcp"
+    }
+  ]
+}
