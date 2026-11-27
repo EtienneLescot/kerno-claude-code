@@ -1,8 +1,11 @@
 {
   "name": "kerno",
-  "owner": { "name": "Kerno", "url": "https://kerno.md" },
+  "owner": {
+    "name": "Kerno",
+    "url": "https://kerno.md"
+  },
   "metadata": {
-    "description": "Kerno : une mémoire persistante et souveraine, partagée entre Claude, Codex, Cursor et vos agents."
+    "description": "Kerno: persistent, sovereign memory shared between Claude, Codex, Cursor and your agents."
   },
   "plugins": [
     {
