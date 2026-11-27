@@ -1,6 +1,6 @@
 ---
 name: kerno-memory
-description: Use Kerno as persistent memory. Use at the start of any task, whenever the user asks what is remembered, what was decided or what their preferences are, and whenever a durable decision, preference, convention or project status should be kept for later sessions or other tools.
+description: Kerno is the user's persistent memory, shared across their AI tools. Use at the start of every conversation or task to recall what is known, whenever the user asks what is remembered, what was decided or what their preferences are, and whenever a durable decision, preference, convention or project status should be kept for later.
 ---
 
 # Kerno memory
