@@ -21,6 +21,8 @@ For Claude on the web, Desktop and mobile, Codex, Cursor and other MCP clients: 
 
 - Remote MCP server `https://api.kerno.md/mcp` (OAuth 2.1, no key to copy).
 - `kerno-memory` skill: when to recall and when to save.
+- `kerno-show` skill: show what Kerno knows (topics, versions, authors, history, diffs between versions, what looks stale or conflicting) and correct it with your go-ahead. Just ask "show me what Kerno knows about…" or type `/kerno:kerno-show`.
+- `kerno-review` skill: clean up memory (stale, duplicated or contradictory topics), with corrections proposed before they are applied.
 - `SessionStart` hook: reminds Claude, in every session, that Kerno is its memory.
 
 ## Data
