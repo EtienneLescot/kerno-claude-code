@@ -38,6 +38,7 @@ Detail (one topic, or when the user picks one): everything above, plus
 - To show what changed: `memory_diff` (default: current version against the one it replaced; `from_version`/`to_version` for any pair). Show the changed lines themselves, as a `diff` code block or a before/after view, with the added/removed line counts. You may add a plain-language summary, but never instead of the diff. If the diff is long or `truncated`, say so and show the most relevant hunks.
 - To show an earlier version in full: `memory_read` with `version`.
 - If `history_truncated` or `history_unavailable` is flagged, say how far back the history goes.
+- Who else can see it: when the user asks who has access, or before showing what will be shared, call `memory_shares` and list the shares whose paths cover the topic or prefix (path, other party, access level, status, end date). Topics read as `@<org>/...` were shared with the user by that organization.
 
 ## 4. Flag what may be wrong
 
