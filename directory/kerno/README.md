@@ -13,7 +13,7 @@ Once installed, Claude Code uses Kerno as its default memory: it recalls your de
 /plugin install kerno@kerno
 ```
 
-Restart Claude Code, type `/mcp`, select `kerno` then “Authenticate”: the Kerno console opens in your browser. Sign in (email link, GitHub or Google; on first sign-in, tick the “professional use and terms” box to create your workspace), choose the access level and click “Authorize”. No key to paste, no instructions to write.
+Restart Claude Code, type `/mcp`, select `kerno` then “Authenticate”: the Kerno console opens in your browser. Sign in (email link, GitHub or Google; on first sign-in, tick the terms box (and the business box if it applies) to create your workspace), choose the access level and click “Authorize”. No key to paste, no instructions to write.
 
 For Claude on the web, Desktop and mobile, Codex, Cursor and other MCP clients: [kerno.md/en/claude](https://kerno.md/en/claude/).
 
@@ -44,7 +44,7 @@ Une fois installé, Claude Code se sert de Kerno comme mémoire par défaut : il
 /plugin install kerno@kerno
 ```
 
-Redémarrez Claude Code, tapez `/mcp`, sélectionnez `kerno` puis « Authenticate » : la console Kerno s’ouvre dans le navigateur. Connectez-vous (lien e-mail, GitHub ou Google ; à la première connexion, cochez la case « usage professionnel et conditions » pour créer votre espace), choisissez l’accès et cliquez sur « Autoriser ». Aucune clé à coller, aucune consigne à écrire.
+Redémarrez Claude Code, tapez `/mcp`, sélectionnez `kerno` puis « Authenticate » : la console Kerno s’ouvre dans le navigateur. Connectez-vous (lien e-mail, GitHub ou Google ; à la première connexion, cochez la case des conditions (et celle de l’usage professionnel si c’est votre cas) pour créer votre espace), choisissez l’accès et cliquez sur « Autoriser ». Aucune clé à coller, aucune consigne à écrire.
 
 Pour Claude sur le web, Desktop et mobile, Codex, Cursor et les autres clients MCP : [kerno.md/claude](https://kerno.md/claude/).
 
