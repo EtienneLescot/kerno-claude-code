@@ -1,11 +1,11 @@
 ---
 name: kerno-memory
-description: Kerno is the user's persistent memory, shared across their AI tools. Use at the start of every conversation or task to recall what is known, whenever the user asks what is remembered, what was decided or what their preferences are, and whenever a durable decision, preference, convention or project status should be kept for later.
+description: Kerno is the shared, versioned knowledge base of the user's team, used as memory across their AI tools. Use at the start of every conversation or task to recall what is known, whenever the user asks what is remembered, what was decided or what their preferences are, and whenever a durable decision, preference, convention or project status should be kept for later.
 ---
 
 # Kerno memory
 
-Kerno is the memory the user installed. It follows them across Claude Code sessions, Claude on the web and mobile, Codex, Cursor and their scripts. Use it without being asked and without the user having to say "Kerno".
+Kerno is the shared, versioned knowledge base the user installed: the living documents of their team (decisions, specs, project status, conventions), shared with teammates and partner organizations. It follows them across Claude Code sessions, Claude on the web and mobile, Codex, Cursor and their scripts, and serves as your memory. Use it without being asked and without the user having to say "Kerno".
 
 ## Recall first
 
@@ -27,7 +27,9 @@ Claude Code also has CLAUDE.md and memory files. Kerno holds the durable facts t
 
 ## Organize
 
-- `<project>/decisions`, `<project>/status`, `<project>/notes` for each project; `me/preferences` for personal preferences.
+- `<project>/decisions`, `<project>/status`, `<project>/notes` for each project.
+- What you write is visible to everyone with access (teammates, partner organizations): write documents others can rely on.
+- Keep the user's personal preferences apart from shared work, in their own area `me/<user>/preferences` (e.g. `me/alice/preferences`); never put personal details in project topics.
 - Topics shared by another organization are addressed `@<org>/<path>`.
 - To update shared state safely: `memory_read` to get `version`, then `memory_write` with `expected_version`; on `VERSION_CONFLICT`, re-read, merge, retry. Use `memory_claim` before a long edit and pass `claim_token`.
 
