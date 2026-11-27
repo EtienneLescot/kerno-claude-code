@@ -11,7 +11,9 @@ Une fois installé, Claude Code se sert de Kerno comme mémoire par défaut : il
 /plugin install kerno@kerno
 ```
 
-Puis `/mcp`, sélectionnez `kerno` et connectez-vous : la console Kerno s'ouvre, choisissez votre espace et cliquez sur « Autoriser ».
+Redémarrez Claude Code, tapez `/mcp`, sélectionnez `kerno` puis « Authenticate » : la console Kerno s'ouvre dans le navigateur. Connectez-vous (lien e-mail, GitHub ou Google ; à la première connexion, cochez la case « usage professionnel et conditions » pour créer votre espace), choisissez l'accès et cliquez sur « Autoriser ». Aucune clé à coller, aucune consigne à écrire.
+
+Pour Claude sur le web, Desktop et mobile, Codex, Cursor et les autres clients MCP : [kerno.md/claude](https://kerno.md/claude/).
 
 ## Contenu
 
