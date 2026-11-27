@@ -1,0 +1,16 @@
+{
+  "name": "kerno",
+  "owner": { "name": "Kerno", "url": "https://kerno.md" },
+  "metadata": {
+    "description": "Kerno : une mémoire persistante et souveraine, partagée entre Claude, Codex, Cursor et vos agents."
+  },
+  "plugins": [
+    {
+      "name": "kerno",
+      "source": "./plugins/kerno",
+      "description": "Kerno memory for Claude Code: recall and save decisions, preferences and project status across sessions and tools, by default.",
+      "category": "productivity",
+      "homepage": "https://kerno.md"
+    }
+  ]
+}
