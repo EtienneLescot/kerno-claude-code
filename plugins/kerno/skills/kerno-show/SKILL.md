@@ -12,6 +12,7 @@ Use this method whenever the user asks to see, check, review or correct what Ker
 ## 1. Find the topics
 
 - `memory_search` with the subject's words (it searches contents, ranked, with an excerpt), and `memory_list` with the closest prefix (or `*`), which gives each topic's one-line summary and last author.
+- Spaces: a path without prefix is in the default space. If `memory_list` `*` returns `spaces`, the user also belongs to those spaces: look there too (`memory_list` `@<slug>/*`) when the subject may live elsewhere, and say which space each topic comes from. Other `@<slug>/…` paths are folders shared by another organization (`shared_with_me`). Show paths exactly as returned, prefix included.
 - Say which prefix you looked under and how many topics you found. Never show a partial list as complete: if there are more, say how many and how to see them.
 
 ## 2. Always show
@@ -22,13 +23,13 @@ Overview (several topics: `memory_list` gives summary, version, date and last au
 - version, as `vN`;
 - date of the last change, absolute (relative if useful);
 - summary: the topic's own first line (`summary`), or yours, labelled as yours;
-- last author or tool (`updated_by.name`, else `type` and `org`), when known;
+- last author and tool: `updated_by.label`, as given (e.g. "Etienne via Claude"; "@acme via Claude" for a partner organization, which never reveals who there wrote it);
 - anything that looks wrong (section 4).
 
 Detail (one topic, or when the user picks one): everything above, plus
 
 - the content, verbatim, or the relevant excerpt with "… N lines omitted";
-- the authors of recent versions: `memory_history` → `written_by.name` (key or connector name), else `type` and `org`; never invent one;
+- the authors of recent versions: `memory_history` → `written_by.label` (person and tool); never invent one, and never try to guess a person behind "@org via …";
 - the dated log if there is one (`memory_read` history; `history_before` pages back through the whole retention);
 - the recent versions and the flags from `memory_history` (sections 3 and 4).
 

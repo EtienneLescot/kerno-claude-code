@@ -30,7 +30,7 @@ Claude Code also has CLAUDE.md and memory files. Kerno holds the durable facts t
 - `<project>/decisions`, `<project>/status`, `<project>/notes` for each project.
 - What you write is visible to everyone with access (teammates, partner organizations): write documents others can rely on.
 - Keep the user's personal preferences apart from shared work, in their own area `me/<user>/preferences` (e.g. `me/alice/preferences`); never put personal details in project topics.
-- Topics shared by another organization are addressed `@<org>/<path>`.
+- Spaces: a path without prefix is in the default space (the one chosen when the user connected Kerno). `@<slug>/<path>` is either another space the user belongs to, or a folder shared by another organization. `memory_list` with `*` lists the other spaces under `spaces` (each with its `@<slug>/` prefix; list one with `@<slug>/*`) and the shared folders under `shared_with_me`. Paths returned from another space keep their `@<slug>/` prefix: reuse them as they are, and save each fact in the space it belongs to.
 - To update shared state safely: `memory_read` to get `version`, then `memory_write` with `expected_version`; on `VERSION_CONFLICT`, re-read, merge, retry. Use `memory_claim` before a long edit and pass `claim_token`.
 
 ## Share
@@ -48,4 +48,4 @@ When the user wants to see, check or correct what is in Kerno, follow the `kerno
 
 ## If the tools are missing
 
-If no Kerno `memory_*` tool is available, the Kerno server is not authenticated yet: tell the user once to run `/mcp`, select `kerno` and sign in. Their browser opens the Kerno console, where they choose a space and click "Autoriser".
+If no Kerno `memory_*` tool is available, the Kerno server is not authenticated yet: tell the user once to run `/mcp`, select `kerno` and sign in. Their browser opens the Kerno console, where they choose a default space and click "Autoriser".
