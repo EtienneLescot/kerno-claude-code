@@ -1,7 +1,7 @@
 {
   "name": "kerno",
-  "version": "1.1.0",
-  "description": "Kerno memory for Claude Code: recall and save decisions, preferences and project status across sessions and tools, by default, and show what is remembered (history, diffs, corrections).",
+  "version": "1.0.1",
+  "description": "Kerno memory for Claude Code: recall and save decisions, preferences and project status across sessions and tools, by default.",
   "author": {
     "name": "Kerno",
     "url": "https://kerno.md"
