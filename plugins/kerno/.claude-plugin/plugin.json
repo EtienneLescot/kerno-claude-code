@@ -1,17 +1,29 @@
 {
   "name": "kerno",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "Kerno memory for Claude Code: recall and save decisions, preferences and project status across sessions and tools, by default, and show what is remembered (history, diffs, corrections).",
   "author": {
     "name": "Kerno",
     "url": "https://kerno.md"
   },
   "homepage": "https://kerno.md",
+  "repository": "https://github.com/EtienneLescot/kerno-claude-code",
+  "documentationUrl": "https://kerno.md/en/claude/",
+  "supportUrl": "https://kerno.md/en/claude/",
   "license": "Proprietary",
-  "keywords": ["memory", "mcp", "context", "sovereign", "eu"],
+  "keywords": [
+    "memory",
+    "mcp",
+    "context",
+    "sovereign",
+    "eu"
+  ],
   "privacyPolicyUrl": "https://kerno.md/confidentialite",
   "termsOfServiceUrl": "https://kerno.md/cgu",
   "network": {
-    "hosts": ["api.kerno.md", "console.kerno.md"]
+    "hosts": [
+      "api.kerno.md",
+      "console.kerno.md"
+    ]
   }
 }
