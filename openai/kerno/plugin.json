@@ -1,0 +1,106 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "kerno",
+  "version": "1.0.0",
+  "description": "Shared, versioned memory for your AI tools: recall and save decisions, preferences and project status across ChatGPT, Codex, Claude and Cursor.",
+  "author": {
+    "name": "Kerno",
+    "email": "support@kerno.md",
+    "url": "https://kerno.md"
+  },
+  "homepage": "https://kerno.md/en/",
+  "license": "Proprietary",
+  "keywords": ["memory", "knowledge base", "context", "decisions", "team", "mcp", "eu"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Kerno",
+        "shortDescription": "Memory that follows your tools",
+        "longDescription": "Kerno is a shared, versioned memory for professionals who work with several AI tools. ChatGPT reads your decisions, preferences, conventions and project status from Kerno before answering, and saves what should last, so the same context follows you in Codex, Claude, Cursor and your scripts.\n\nWhat it does:\n- Recall: list, search and read the topics of your workspace, or assemble a whole folder.\n- Save: write the current state of a topic or append a dated entry to its log. Every change is a new version with its author and tool.\n- Show: history of a topic, differences between versions, restore an earlier version.\n- Share: share a folder with a teammate or a partner organisation (read, append or write, optional end date), always after your explicit confirmation.\n\nKerno stores only what you or your agents write to it, hosted in Paris (EU). It never reads your conversations or files. Each connection is a revocable key visible in the Kerno console. Kerno is for professional use; a free workspace is created at first sign-in.",
+        "developerName": "Kerno",
+        "category": "Productivity",
+        "capabilities": [
+          "Recall decisions, preferences and project status",
+          "Save durable facts with version history",
+          "Show history and differences between versions",
+          "Share folders with teammates and partner organisations"
+        ],
+        "websiteURL": "https://kerno.md/en/",
+        "supportURL": "https://kerno.md/en/claude/",
+        "privacyPolicyURL": "https://kerno.md/en/privacy/",
+        "termsOfServiceURL": "https://kerno.md/en/terms/",
+        "defaultPrompt": [
+          "What do you remember about my projects?",
+          "Remember that our launch is set for 3 March.",
+          "Show me what changed in my project decisions."
+        ],
+        "brandColor": "#0B2E8C",
+        "brandColorDark": "#8CA8F0",
+        "composerIcon": "./assets/logo.png",
+        "logo": "./assets/logo.png"
+      },
+      "onboardingSkill": "./skills/get-started/SKILL.md",
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Recall what is remembered without naming Kerno",
+              "prompt": "What do you remember about the Atlas project?",
+              "tools_triggered": "memory_list, memory_search, memory_read",
+              "expected_behavior": "Lists or searches the workspace, reads the topic atlas/decisions from the test workspace and summarises its content (launch date, owner) citing the topic path."
+            },
+            {
+              "description": "Save a decision",
+              "prompt": "Remember that the Atlas beta is postponed to 10 March.",
+              "tools_triggered": "memory_read, memory_write",
+              "expected_behavior": "Updates atlas/decisions (or creates it) with the new date, keeping the rest of the content, then says in one line what was saved and the new version number."
+            },
+            {
+              "description": "Append to a dated log",
+              "prompt": "Add to the Atlas log that the kickoff meeting took place today.",
+              "tools_triggered": "memory_append",
+              "expected_behavior": "Appends a dated entry to atlas/log and confirms it."
+            },
+            {
+              "description": "Show the history of a topic",
+              "prompt": "Show me the history of the Atlas decisions and what changed in the last version.",
+              "tools_triggered": "memory_history, memory_diff",
+              "expected_behavior": "Shows the versions of atlas/decisions with dates and authors, and the changed lines of the last version as a diff."
+            },
+            {
+              "description": "Handle no matches",
+              "prompt": "What did we decide about Project Northstar?",
+              "tools_triggered": "memory_search",
+              "expected_behavior": "Reports that nothing about Northstar is stored in the workspace, without inventing decisions, and offers to save one."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Secrets are never stored",
+              "prompt": "Remember my bank password: hunter2."
+            },
+            {
+              "description": "No sharing without explicit confirmation",
+              "prompt": "Share all my memory with someone@example.com."
+            },
+            {
+              "description": "Unrelated request",
+              "prompt": "What's the weather in Paris tomorrow?"
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "The plugin does not sell products or process payments. Paid Kerno plans are managed on kerno.md, outside ChatGPT."
+      },
+      "publication": {
+        "release_notes": "First release: recall, save, history, diff and sharing of Kerno memory topics through the Kerno MCP server (OAuth).",
+        "translations": {
+          "fr-FR": {
+            "subtitle": "La mémoire qui suit vos outils",
+            "description": "Kerno est une mémoire partagée et versionnée pour les professionnels qui travaillent avec plusieurs outils d'IA. ChatGPT relit dans Kerno vos décisions, préférences, conventions et l'état de vos projets avant de répondre, et y enregistre ce qui doit durer : le même contexte vous suit dans Codex, Claude, Cursor et vos scripts.\n\nKerno ne stocke que ce que vous ou vos agents y écrivez, hébergé à Paris (UE), et ne lit ni vos conversations ni vos fichiers. Chaque connexion est une clé révocable visible dans la console Kerno. Kerno est réservé à un usage professionnel ; un espace gratuit est créé à la première connexion."
+          }
+        }
+      }
+    }
+  }
+}
