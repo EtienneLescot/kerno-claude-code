@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "kerno": {
+      "type": "http",
+      "url": "https://api.kerno.md/mcp"
+    }
+  }
+}
