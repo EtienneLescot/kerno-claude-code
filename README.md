@@ -17,6 +17,8 @@ Restart Claude Code, type `/mcp`, select `kerno` then “Authenticate”: the Ke
 
 For Claude on the web, Desktop and mobile, Codex, Cursor and other MCP clients: [kerno.md/en/claude](https://kerno.md/en/claude/).
 
+Kerno is also listed in the [official MCP Registry](https://registry.modelcontextprotocol.io/v0/servers?search=io.github.EtienneLescot/kerno) as `io.github.EtienneLescot/kerno` (see `server.json`).
+
 ## Contents
 
 - Remote MCP server `https://api.kerno.md/mcp` (OAuth 2.1, no key to copy).
